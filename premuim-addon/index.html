@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	
+	<title>premuim addon – JACKEY LIU</title>
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//s.w.org">
+<link href="https://fonts.gstatic.com" crossorigin rel="preconnect">
+
+
+<link rel="stylesheet" id="generate-fonts-css" href="//fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="https://c0.wp.com/c/5.4.1/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wc-block-vendors-style-css" href="https://c0.wp.com/p/woocommerce/4.3.1/packages/woocommerce-blocks/build/vendors-style.css" type="text/css" media="all">
+<link rel="stylesheet" id="wc-block-style-css" href="https://c0.wp.com/p/woocommerce/4.3.1/packages/woocommerce-blocks/build/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="woocommerce-layout-css" href="https://c0.wp.com/p/woocommerce/4.3.1/assets/css/woocommerce-layout.css" type="text/css" media="all">
+<style id="woocommerce-layout-inline-css" type="text/css">
+
+	.infinite-scroll .woocommerce-pagination {
+		display: none;
+	}
+</style>
+<link rel="stylesheet" id="woocommerce-smallscreen-css" href="https://c0.wp.com/p/woocommerce/4.3.1/assets/css/woocommerce-smallscreen.css" type="text/css" media="only screen and (max-width: 768px)">
+<link rel="stylesheet" id="woocommerce-general-css" href="https://c0.wp.com/p/woocommerce/4.3.1/assets/css/woocommerce.css" type="text/css" media="all">
+<style id="woocommerce-general-inline-css" type="text/css">
+.woocommerce .page-header-image-single {display: none;}.woocommerce .entry-content,.woocommerce .product .entry-summary {margin-top: 0;}.related.products {clear: both;}.checkout-subscribe-prompt.clear {visibility: visible;height: initial;width: initial;}@media (max-width:768px) {.woocommerce .woocommerce-ordering,.woocommerce-page .woocommerce-ordering {float: none;}.woocommerce .woocommerce-ordering select {max-width: 100%;}.woocommerce ul.products li.product,.woocommerce-page ul.products li.product,.woocommerce-page[class*=columns-] ul.products li.product,.woocommerce[class*=columns-] ul.products li.product {width: 100%;float: none;}}
+</style>
+<style id="woocommerce-inline-inline-css" type="text/css">
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel="stylesheet" id="generate-style-grid-css" href="https://jackeyliutw.github.io/2020728/wp-content/themes/generatepress/css/unsemantic-grid.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="generate-style-css" href="https://jackeyliutw.github.io/2020728/wp-content/themes/generatepress/style.min.css" type="text/css" media="all">
+<style id="generate-style-inline-css" type="text/css">
+body{background-color:#efefef;color:#3a3a3a;}a, a:visited{color:#1e73be;}a:hover, a:focus, a:active{color:#000000;}body .grid-container{max-width:1100px;}.wp-block-group__inner-container{max-width:1100px;margin-left:auto;margin-right:auto;}body, button, input, select, textarea{font-family:"Open Sans", sans-serif;}.entry-content > [class*="wp-block-"]:not(:last-child){margin-bottom:1.5em;}.main-navigation .main-nav ul ul li a{font-size:14px;}@media (max-width:768px){.main-title{font-size:30px;}h1{font-size:30px;}h2{font-size:25px;}}.top-bar{background-color:#636363;color:#ffffff;}.top-bar a,.top-bar a:visited{color:#ffffff;}.top-bar a:hover{color:#303030;}.site-header{background-color:#ffffff;color:#3a3a3a;}.site-header a,.site-header a:visited{color:#3a3a3a;}.main-title a,.main-title a:hover,.main-title a:visited{color:#222222;}.site-description{color:#757575;}.main-navigation,.main-navigation ul ul{background-color:#222222;}.main-navigation .main-nav ul li a,.menu-toggle{color:#ffffff;}.main-navigation .main-nav ul li:hover > a,.main-navigation .main-nav ul li:focus > a, .main-navigation .main-nav ul li.sfHover > a{color:#ffffff;background-color:#3f3f3f;}button.menu-toggle:hover,button.menu-toggle:focus,.main-navigation .mobile-bar-items a,.main-navigation .mobile-bar-items a:hover,.main-navigation .mobile-bar-items a:focus{color:#ffffff;}.main-navigation .main-nav ul li[class*="current-menu-"] > a{color:#ffffff;background-color:#3f3f3f;}.main-navigation .main-nav ul li[class*="current-menu-"] > a:hover,.main-navigation .main-nav ul li[class*="current-menu-"].sfHover > a{color:#ffffff;background-color:#3f3f3f;}.navigation-search input[type="search"],.navigation-search input[type="search"]:active, .navigation-search input[type="search"]:focus, .main-navigation .main-nav ul li.search-item.active > a{color:#ffffff;background-color:#3f3f3f;}.main-navigation ul ul{background-color:#3f3f3f;}.main-navigation .main-nav ul ul li a{color:#ffffff;}.main-navigation .main-nav ul ul li:hover > a,.main-navigation .main-nav ul ul li:focus > a,.main-navigation .main-nav ul ul li.sfHover > a{color:#ffffff;background-color:#4f4f4f;}.main-navigation .main-nav ul ul li[class*="current-menu-"] > a{color:#ffffff;background-color:#4f4f4f;}.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover,.main-navigation .main-nav ul ul li[class*="current-menu-"].sfHover > a{color:#ffffff;background-color:#4f4f4f;}.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .one-container .container, .separate-containers .paging-navigation, .inside-page-header{background-color:#ffffff;}.entry-meta{color:#595959;}.entry-meta a,.entry-meta a:visited{color:#595959;}.entry-meta a:hover{color:#1e73be;}.sidebar .widget{background-color:#ffffff;}.sidebar .widget .widget-title{color:#000000;}.footer-widgets{background-color:#ffffff;}.footer-widgets .widget-title{color:#000000;}.site-info{color:#ffffff;background-color:#222222;}.site-info a,.site-info a:visited{color:#ffffff;}.site-info a:hover{color:#606060;}.footer-bar .widget_nav_menu .current-menu-item a{color:#606060;}input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="tel"],input[type="number"],textarea,select{color:#666666;background-color:#fafafa;border-color:#cccccc;}input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="number"]:focus,textarea:focus,select:focus{color:#666666;background-color:#ffffff;border-color:#bfbfbf;}button,html input[type="button"],input[type="reset"],input[type="submit"],a.button,a.button:visited,a.wp-block-button__link:not(.has-background){color:#ffffff;background-color:#666666;}button:hover,html input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,a.button:hover,button:focus,html input[type="button"]:focus,input[type="reset"]:focus,input[type="submit"]:focus,a.button:focus,a.wp-block-button__link:not(.has-background):active,a.wp-block-button__link:not(.has-background):focus,a.wp-block-button__link:not(.has-background):hover{color:#ffffff;background-color:#3f3f3f;}.generate-back-to-top,.generate-back-to-top:visited{background-color:rgba( 0,0,0,0.4 );color:#ffffff;}.generate-back-to-top:hover,.generate-back-to-top:focus{background-color:rgba( 0,0,0,0.6 );color:#ffffff;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-40px;width:calc(100% + 80px);max-width:calc(100% + 80px);}.rtl .menu-item-has-children .dropdown-menu-toggle{padding-left:20px;}.rtl .main-navigation .main-nav ul li.menu-item-has-children > a{padding-right:20px;}@media (max-width:768px){.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header, .wp-block-group__inner-container{padding:30px;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-30px;width:calc(100% + 60px);max-width:calc(100% + 60px);}}.one-container .sidebar .widget{padding:0px;}@media (max-width:768px){.main-navigation .menu-toggle,.main-navigation .mobile-bar-items,.sidebar-nav-mobile:not(#sticky-placeholder){display:block;}.main-navigation ul,.gen-sidebar-nav{display:none;}[class*="nav-float-"] .site-header .inside-header > *{float:none;clear:both;}}@font-face {font-family: "GeneratePress";src:  url("https://jackeyliutw.github.io/2020728/wp-content/themes/generatepress/fonts/generatepress.eot");src:  url("https://jackeyliutw.github.io/2020728/wp-content/themes/generatepress/fonts/generatepress.eot#iefix") format("embedded-opentype"),  url("https://jackeyliutw.github.io/2020728/wp-content/themes/generatepress/fonts/generatepress.woff2") format("woff2"),  url("https://jackeyliutw.github.io/2020728/wp-content/themes/generatepress/fonts/generatepress.woff") format("woff"),  url("https://jackeyliutw.github.io/2020728/wp-content/themes/generatepress/fonts/generatepress.ttf") format("truetype"),  url("https://jackeyliutw.github.io/2020728/wp-content/themes/generatepress/fonts/generatepress.svg#GeneratePress") format("svg");font-weight: normal;font-style: normal;}
+</style>
+<link rel="stylesheet" id="generate-mobile-style-css" href="https://jackeyliutw.github.io/2020728/wp-content/themes/generatepress/css/mobile.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="https://jackeyliutw.github.io/2020728/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-css" href="https://jackeyliutw.github.io/2020728/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-animations-css" href="https://jackeyliutw.github.io/2020728/wp-content/plugins/elementor/assets/lib/animations/animations.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-frontend-css" href="https://jackeyliutw.github.io/2020728/wp-content/plugins/elementor/assets/css/frontend.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="lae-animate-styles-css" href="https://jackeyliutw.github.io/2020728/wp-content/plugins/addons-for-elementor/assets/css/animate.css" type="text/css" media="all">
+<link rel="stylesheet" id="lae-sliders-styles-css" href="https://jackeyliutw.github.io/2020728/wp-content/plugins/addons-for-elementor/assets/css/sliders.css" type="text/css" media="all">
+<link rel="stylesheet" id="lae-icomoon-styles-css" href="https://jackeyliutw.github.io/2020728/wp-content/plugins/addons-for-elementor/assets/css/icomoon.css" type="text/css" media="all">
+<link rel="stylesheet" id="lae-frontend-styles-css" href="https://jackeyliutw.github.io/2020728/wp-content/plugins/addons-for-elementor/assets/css/lae-frontend.css" type="text/css" media="all">
+<link rel="stylesheet" id="lae-widgets-styles-css" href="https://jackeyliutw.github.io/2020728/wp-content/plugins/addons-for-elementor/assets/css/lae-widgets.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-global-css" href="https://jackeyliutw.github.io/2020728/wp-content/uploads/elementor/css/global.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-42-css" href="https://jackeyliutw.github.io/2020728/wp-content/uploads/elementor/css/post-42.css" type="text/css" media="all">
+<link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPlayfair+Display%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&ver=5.4.1" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-shared-0-css" href="https://jackeyliutw.github.io/2020728/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-fa-solid-css" href="https://jackeyliutw.github.io/2020728/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css" type="text/css" media="all">
+<script type="text/javascript" src="https://c0.wp.com/c/5.4.1/wp-includes/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/5.4.1/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+
+
+
+
+
+
+
+
+        <script type="text/javascript">
+            (function () {
+                window.lae_fs = {can_use_premium_code: false};
+            })();
+        </script>
+        
+<link rel="dns-prefetch" href="//c0.wp.com">
+<meta name="viewport" content="width=device-width, initial-scale=1">	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+				<style type="text/css">
+				/* If html does not have either class, do not show lazy loaded images. */
+				html:not( .jetpack-lazy-images-js-enabled ):not( .js ) .jetpack-lazy-image {
+					display: none;
+				}
+			</style>
+			<script>
+				document.documentElement.classList.add(
+					'jetpack-lazy-images-js-enabled'
+				);
+			</script>
+		</head>
+
+<body class="page-template page-template-elementor_header_footer page page-id-42 wp-embed-responsive theme-generatepress woocommerce-no-js right-sidebar nav-below-header fluid-header separate-containers active-footer-widgets-3 nav-aligned-left header-aligned-left dropdown-hover elementor-default elementor-template-full-width elementor-kit-9 elementor-page elementor-page-42" itemtype="https://schema.org/WebPage" itemscope>
+	<a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>		<header id="masthead" class="site-header" itemtype="https://schema.org/WPHeader" itemscope>
+			<div class="inside-header grid-container grid-parent">
+							</div>
+		</header>
+				<nav id="site-navigation" class="main-navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+			<div class="inside-navigation grid-container grid-parent">
+								<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<span class="mobile-menu">Menu</span>				</button>
+						<div id="primary-menu" class="main-nav">
+			<ul class="menu sf-menu">
+				<li class="page_item page-item-2"><a href="https://jackeyliutw.github.io/2020728/sample-page/">範例頁面</a></li>
+<li class="page_item page-item-19"><a href="https://jackeyliutw.github.io/2020728/products/">products</a></li>
+<li class="page_item page-item-42 current-menu-item"><a href="https://jackeyliutw.github.io/2020728/premuim-addon/">premuim addon</a></li>
+<li class="page_item page-item-45"><a href="https://jackeyliutw.github.io/2020728/live-mash/">live mash</a></li>
+<li class="page_item page-item-58"><a href="https://jackeyliutw.github.io/2020728/shop/">Shop</a></li>
+<li class="page_item page-item-59"><a href="https://jackeyliutw.github.io/2020728/cart/">Cart</a></li>
+<li class="page_item page-item-60"><a href="https://jackeyliutw.github.io/2020728/checkout/">Checkout</a></li>
+<li class="page_item page-item-61"><a href="https://jackeyliutw.github.io/2020728/my-account/">My account</a></li>
+<li class="page_item page-item-66"><a href="https://jackeyliutw.github.io/2020728/form/">form</a></li>
+			</ul>
+		</div>
+					</div>
+		</nav>
+		
+	<div id="page" class="hfeed site grid-container container grid-parent">
+				<div id="content" class="site-content">
+					<div data-elementor-type="wp-page" data-elementor-id="42" class="elementor elementor-42" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-4e60d155 elementor-section-stretched elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="4e60d155" data-element_type="section" data-settings='{"stretch_section":"section-stretched","background_background":"classic"}'>
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5d84c990 elementor-column elementor-col-100 elementor-top-column" data-id="5d84c990" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-88a2e36 elementor-widget elementor-widget-premium-addon-dual-header" data-id="88a2e36" data-element_type="widget" data-widget_type="premium-addon-dual-header.default">
+				<div class="elementor-widget-container">
+			    
+    <div class="premium-dual-header-container">
+                    <div class="premium-dual-header-first-container">
+                <h2 class="premium-dual-header-first-header "><span class="premium-dual-header-first-span">Unique </span><span class="premium-dual-header-second-header ">Pricing Plans.</span></h2>             </div>
+            </div>
+
+    		</div>
+				</div>
+				<div class="elementor-element elementor-element-22e89028 elementor-widget elementor-widget-text-editor" data-id="22e89028" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p></div>
+				</div>
+				</div>
+				<section class="elementor-element elementor-element-7ae35694 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="7ae35694" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2c13fc7d elementor-column elementor-col-33 elementor-inner-column" data-id="2c13fc7d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-558bdd60 elementor-widget elementor-widget-premium-addon-pricing-table" data-id="558bdd60" data-element_type="widget" data-widget_type="premium-addon-pricing-table.default">
+				<div class="elementor-widget-container">
+			    
+    <div class="premium-pricing-table-container">
+                <h3 class="premium-pricing-table-title">
+            <span>Power</span>
+            </h3>
+                        <div class="premium-pricing-price-container">
+            <strike class="premium-pricing-slashed-price-value">
+                            </strike>
+            <span class="premium-pricing-price-currency">
+                $            </span>
+            <span class="premium-pricing-price-value">
+                30            </span>    
+            <span class="premium-pricing-price-separator">
+                /    
+            </span>
+            <span class="premium-pricing-price-duration">
+                Month            </span>
+        </div>
+                    <div class="premium-pricing-list-container">
+                <ul class="premium-pricing-list">
+                                            <li class="elementor-repeater-item-c456ec2 premium-pricing-list-item">
+                                                                                                <i class="premium-pricing-feature-icon fa fa-check"></i>
+                                                                                        
+                                                            <span class="premium-pricing-list-span ">
+                                    1GB Disk Space    
+                                </span>
+                                                    </li>
+                                            <li class="elementor-repeater-item-630742c premium-pricing-list-item">
+                                                                                                <i class="premium-pricing-feature-icon fa fa-check"></i>
+                                                                                        
+                                                            <span class="premium-pricing-list-span ">
+                                    10GB Bandwidth    
+                                </span>
+                                                    </li>
+                                            <li class="elementor-repeater-item-82c0e50 premium-pricing-list-item">
+                                                                                                <i class="premium-pricing-feature-icon fa fa-check"></i>
+                                                                                        
+                                                            <span class="premium-pricing-list-span ">
+                                    Unlimited Email Accounts    
+                                </span>
+                                                    </li>
+                                            <li class="elementor-repeater-item-8466144 premium-pricing-list-item">
+                                                                                                <i class="premium-pricing-feature-icon fa fa-check"></i>
+                                                                                        
+                                                            <span class="premium-pricing-list-span ">
+                                    Unlimited FTP Accounts    
+                                </span>
+                                                    </li>
+                                            <li class="elementor-repeater-item-a4a4236 premium-pricing-list-item">
+                                                                                                <i class="premium-pricing-feature-icon fa fa-check"></i>
+                                                                                        
+                                                            <span class="premium-pricing-list-span ">
+                                    24 7 Premium Support    
+                                </span>
+                                                    </li>
+                                            <li class="elementor-repeater-item-d99c3e8 premium-pricing-list-item">
+                                                                                                <i class="premium-pricing-feature-icon fa fa-check"></i>
+                                                                                        
+                                                            <span class="premium-pricing-list-span ">
+                                    Free SSL Certificate    
+                                </span>
+                                                    </li>
+                                    </ul>
+            </div>
+                        <div class="premium-pricing-description-container">
+            <div>
+            <p style="text-align: center;">Suitable for New Users, Startups and Small Businesses</p>            </div>
+        </div>
+                        <div class="premium-pricing-button-container">
+            <a class="premium-pricing-price-button" target="_blank" href="#">
+                <span>Order Now</span>
+            </a>
+        </div>
+            </div>
+
+    		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-12cd2a21 elementor-column elementor-col-33 elementor-inner-column" data-id="12cd2a21" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-23dbe41a elementor-widget elementor-widget-premium-addon-pricing-table" data-id="23dbe41a" data-element_type="widget" data-widget_type="premium-addon-pricing-table.default">
+				<div class="elementor-widget-container">
+			    
+    <div class="premium-pricing-table-container">
+                <h3 class="premium-pricing-table-title">
+            <span>Master</span>
+            </h3>
+                        <div class="premium-pricing-price-container">
+            <strike class="premium-pricing-slashed-price-value">
+                            </strike>
+            <span class="premium-pricing-price-currency">
+                $            </span>
+            <span class="premium-pricing-price-value">
+                60            </span>    
+            <span class="premium-pricing-price-separator">
+                /    
+            </span>
+            <span class="premium-pricing-price-duration">
+                Month            </span>
+        </div>
+                    <div class="premium-pricing-list-container">
+                <ul class="premium-pricing-list">
+                                            <li class="elementor-repeater-item-c456ec2 premium-pricing-list-item">
+                                                                                                <i class="premium-pricing-feature-icon fa fa-check"></i>
+                                                                                        
+                                                            <span class="premium-pricing-list-span ">
+                                    2GB Disk Space    
+                                </span>
+                                                    </li>
+                                            <li class="elementor-repeater-item-630742c premium-pricing-list-item">
+                                                                                                <i class="premium-pricing-feature-icon fa fa-check"></i>
+                                                                                        
+                                                            <span class="premium-pricing-list-span ">
+                                    20GB Bandwidth    
+                                </span>
+                                                    </li>
+                                            <li class="elementor-repeater-item-82c0e50 premium-pricing-list-item">
+                                                                                                <i class="premium-pricing-feature-icon fa fa-check"></i>
+                                                                                        
+                                                            <span class="premium-pricing-list-span ">
+                                    Unlimited Email Accounts    
+                                </span>
+                                                    </li>
+                                            <li class="elementor-repeater-item-8466144 premium-pricing-list-item">
+                                                                                                <i class="premium-pricing-feature-icon fa fa-check"></i>
+                                                                                        
+                                                            <span class="premium-pricing-list-span ">
+                                    Unlimited FTP Accounts    
+                                </span>
+                                                    </li>
+                                            <li class="elementor-repeater-item-a4a4236 premium-pricing-list-item">
+                                                                                                <i class="premium-pricing-feature-icon fa fa-check"></i>
+                                                                                        
+                                                            <span class="premium-pricing-list-span ">
+                                    24 7 Premium Support    
+                                </span>
+                                                    </li>
+                                            <li class="elementor-repeater-item-d99c3e8 premium-pricing-list-item">
+                                                                                                <i class="premium-pricing-feature-icon fa fa-check"></i>
+                                                                                        
+                                                            <span class="premium-pricing-list-span ">
+                                    Free SSL Certificate    
+                                </span>
+                                                    </li>
+                                    </ul>
+            </div>
+                        <div class="premium-pricing-description-container">
+            <div>
+            <p style="text-align: center;">Suitable for Intermediate Users and Medium Businesses</p>            </div>
+        </div>
+                        <div class="premium-pricing-button-container">
+            <a class="premium-pricing-price-button" target="_blank" href="#">
+                <span>Order Now</span>
+            </a>
+        </div>
+            </div>
+
+    		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-21339565 elementor-column elementor-col-33 elementor-inner-column" data-id="21339565" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c4791ef elementor-widget elementor-widget-premium-addon-pricing-table" data-id="c4791ef" data-element_type="widget" data-widget_type="premium-addon-pricing-table.default">
+				<div class="elementor-widget-container">
+			    
+    <div class="premium-pricing-table-container">
+                <h3 class="premium-pricing-table-title">
+            <span>Grand</span>
+            </h3>
+                        <div class="premium-pricing-price-container">
+            <strike class="premium-pricing-slashed-price-value">
+                            </strike>
+            <span class="premium-pricing-price-currency">
+                $            </span>
+            <span class="premium-pricing-price-value">
+                90            </span>    
+            <span class="premium-pricing-price-separator">
+                /    
+            </span>
+            <span class="premium-pricing-price-duration">
+                Month            </span>
+        </div>
+                    <div class="premium-pricing-list-container">
+                <ul class="premium-pricing-list">
+                                            <li class="elementor-repeater-item-c456ec2 premium-pricing-list-item">
+                                                                                                <i class="premium-pricing-feature-icon fa fa-check"></i>
+                                                                                        
+                                                            <span class="premium-pricing-list-span ">
+                                    3GB Disk Space    
+                                </span>
+                                                    </li>
+                                            <li class="elementor-repeater-item-630742c premium-pricing-list-item">
+                                                                                                <i class="premium-pricing-feature-icon fa fa-check"></i>
+                                                                                        
+                                                            <span class="premium-pricing-list-span ">
+                                    30GB Bandwidth    
+                                </span>
+                                                    </li>
+                                            <li class="elementor-repeater-item-82c0e50 premium-pricing-list-item">
+                                                                                                <i class="premium-pricing-feature-icon fa fa-check"></i>
+                                                                                        
+                                                            <span class="premium-pricing-list-span ">
+                                    Unlimited Email Accounts    
+                                </span>
+                                                    </li>
+                                            <li class="elementor-repeater-item-8466144 premium-pricing-list-item">
+                                                                                                <i class="premium-pricing-feature-icon fa fa-check"></i>
+                                                                                        
+                                                            <span class="premium-pricing-list-span ">
+                                    Unlimited FTP Accounts    
+                                </span>
+                                                    </li>
+                                            <li class="elementor-repeater-item-a4a4236 premium-pricing-list-item">
+                                                                                                <i class="premium-pricing-feature-icon fa fa-check"></i>
+                                                                                        
+                                                            <span class="premium-pricing-list-span ">
+                                    24 7 Premium Support    
+                                </span>
+                                                    </li>
+                                            <li class="elementor-repeater-item-d99c3e8 premium-pricing-list-item">
+                                                                                                <i class="premium-pricing-feature-icon fa fa-check"></i>
+                                                                                        
+                                                            <span class="premium-pricing-list-span ">
+                                    Free SSL Certificate    
+                                </span>
+                                                    </li>
+                                    </ul>
+            </div>
+                        <div class="premium-pricing-description-container">
+            <div>
+            <p style="text-align: center;">Suitable for Professional Users and Large Businesses</p>            </div>
+        </div>
+                        <div class="premium-pricing-button-container">
+            <a class="premium-pricing-price-button" target="_blank" href="#">
+                <span>Order Now</span>
+            </a>
+        </div>
+            </div>
+
+    		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-bd58709 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="bd58709" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3dc887d elementor-column elementor-col-100 elementor-top-column" data-id="3dc887d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-fc3a8af elementor-widget elementor-widget-premium-addon-fancy-text" data-id="fc3a8af" data-element_type="widget" data-widget_type="premium-addon-fancy-text.default">
+				<div class="elementor-widget-container">
+			    
+        <div class="premium-fancy-text-wrapper typing" data-settings='{"effect":"typing","strings":["Designer","Developeraaaa","Awesome"],"typeSpeed":30,"backSpeed":30,"startDelay":30,"backDelay":30,"showCursor":true,"cursorChar":"|","loop":true}'>
+            <span class="premium-prefix-text"><span>This is</span></span>
+
+                    <span class="premium-fancy-text"></span>
+                <span class="premium-suffix-text"><span>Text</span></span>
+    </div>
+    		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-332bc20 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="332bc20" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-c6934e5 elementor-column elementor-col-100 elementor-top-column" data-id="c6934e5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-f6e25da elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="f6e25da" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-cd1a63b elementor-column elementor-col-100 elementor-top-column" data-id="cd1a63b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-9f2f734 elementor-widget elementor-widget-button" data-id="9f2f734" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="#" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-buzz" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">Click here</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-0a2c2c6 elementor-widget elementor-widget-premium-addon-blog" data-id="0a2c2c6" data-element_type="widget" data-widget_type="premium-addon-blog.default">
+				<div class="elementor-widget-container">
+			    <div class="premium-blog">
+                <div class="premium-blog-wrap premium-blog-even premium-blog-col-1" data-layout="even" data-equal="">
+
+                    <div class="premium-blog-post-outer-container">
+            <div class="premium-blog-post-container premium-blog-skin-classic">
+                                <div class="premium-blog-thumb-effect-wrapper">
+                    <div class="premium-blog-thumbnail-container premium-blog-zoomin-effect">
+                                            </div>
+                                            <div class="premium-blog-thumbnail-overlay">    
+                            <a class="elementor-icon" href="https://jackeyliutw.github.io/2020728/2020/07/22/hello-world/" target="_blank">
+                                                                            <i class="premium-blog-format-icon fa fa-thumb-tack"></i>
+                                                                </a>
+                        </div>
+                                    </div>
+                                                <div class="premium-blog-content-wrapper empty-thumb">
+                    <div class="premium-blog-inner-container">
+                                                <div class="premium-blog-format-container">
+                            <a class="premium-blog-format-link" href="https://jackeyliutw.github.io/2020728/2020/07/22/hello-world/" title="" target="_blank">        <i class="premium-blog-format-icon fa fa-thumb-tack"></i>
+    </a>
+                        </div>
+                                                <div class="premium-blog-entry-container">
+                                    
+        <h2 class="premium-blog-entry-title">
+            <a href="https://jackeyliutw.github.io/2020728/2020/07/22/hello-world/" target="_blank">
+                網站第一篇文章            </a>
+        </h2>
+        
+            
+        <div class="premium-blog-entry-meta" style="">
+        
+                            <span class="premium-blog-post-author premium-blog-meta-data">
+                    <i class="fa fa-user fa-fw"></i><a href="https://jackeyliutw.github.io/2020728/author/admin/" title="「admin」的文章" rel="author">admin</a>                </span>
+            
+                            <span class="premium-blog-meta-separator">|</span>
+                <span class="premium-blog-post-time premium-blog-meta-data">
+                    <i class="fa fa-calendar fa-fw"></i>
+                    <span>2020 年 7 月 22 日</span>
+                </span>
+            
+                            <span class="premium-blog-meta-separator">|</span>
+                <span class="premium-blog-post-categories premium-blog-meta-data">
+                    <i class="fa fa-align-left fa-fw"></i>
+                    <a href="https://jackeyliutw.github.io/2020728/category/uncategorized/" rel="category tag">未分類</a>                </span>
+            
+                            <span class="premium-blog-meta-separator">|</span>
+                <span class="premium-blog-post-comments premium-blog-meta-data">
+                    <i class="fa fa-comments-o fa-fw"></i>
+                    <span>
+                        <a href="https://jackeyliutw.github.io/2020728/2020/07/22/hello-world/#comments">1 Comment</a>                    </span>
+                </span>
+                    </div>
+        
+    
+                        </div>
+                    </div>
+
+                            <div class="premium-blog-post-content" style="">
+            歡迎使用 WordPress。這是這個網站的第一篇文章，試試為這篇文章進行編輯或直接刪除，然後開始撰寫新文章！        </div>
+                        
+                                    </div>
+            </div>
+        </div>
+
+            </div>
+    </div>
+    		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-7539653 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="7539653" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-7ba7726 elementor-column elementor-col-100 elementor-top-column" data-id="7ba7726" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-109a9e3 elementor-widget elementor-widget-premium-addon-button" data-id="109a9e3" data-element_type="widget" data-widget_type="premium-addon-button.default">
+				<div class="elementor-widget-container">
+			
+    <div class="premium-button-container">
+        <a class="premium-button premium-button-lg premium-button-none" href="#">
+            <div class="premium-button-text-icon-wrapper">
+                                <span>Click Me</span>
+                            </div>
+                    </a>
+    </div>
+
+    		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+
+<div class="site-footer">
+			<footer class="site-info" itemtype="https://schema.org/WPFooter" itemscope>
+			<div class="inside-site-info grid-container grid-parent">
+								<div class="copyright-bar">
+					<span class="copyright">© 2020 JACKEY LIU</span> • Powered by <a href="https://generatepress.com" itemprop="url">GeneratePress</a>				</div>
+			</div>
+		</footer>
+		</div>
+
+<a title="Scroll back to top" rel="nofollow" href="#" class="generate-back-to-top" style="opacity:0;visibility:hidden;" data-scroll-speed="400" data-start-scroll="300">
+				<span class="screen-reader-text">Scroll back to top</span>
+				
+			</a>	<script type="text/javascript">
+		var c = document.body.className;
+		c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+		document.body.className = c;
+	</script>
+	<link rel="stylesheet" id="premium-addons-css" href="https://jackeyliutw.github.io/2020728/wp-content/plugins/premium-addons-for-elementor/assets/frontend/min-css/premium-addons.min.css" type="text/css" media="all">
+<script type="text/javascript" src="https://c0.wp.com/p/woocommerce/4.3.1/assets/js/jquery-blockui/jquery.blockUI.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/demo\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/demo\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/jackeyliutw.github.io\/2020728\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://c0.wp.com/p/woocommerce/4.3.1/assets/js/frontend/add-to-cart.min.js"></script>
+<script type="text/javascript" src="https://c0.wp.com/p/woocommerce/4.3.1/assets/js/js-cookie/js.cookie.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/demo\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/demo\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://c0.wp.com/p/woocommerce/4.3.1/assets/js/frontend/woocommerce.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/demo\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/demo\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_8de2fae52e7afab027d3b9b1ab59ff16","fragment_name":"wc_fragments_8de2fae52e7afab027d3b9b1ab59ff16","request_timeout":"5000"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://c0.wp.com/p/woocommerce/4.3.1/assets/js/frontend/cart-fragments.min.js"></script>
+<script type="text/javascript">
+		jQuery( 'body' ).bind( 'wc_fragments_refreshed', function() {
+			var jetpackLazyImagesLoadEvent;
+			try {
+				jetpackLazyImagesLoadEvent = new Event( 'jetpack-lazy-images-load', {
+					bubbles: true,
+					cancelable: true
+				} );
+			} catch ( e ) {
+				jetpackLazyImagesLoadEvent = document.createEvent( 'Event' )
+				jetpackLazyImagesLoadEvent.initEvent( 'jetpack-lazy-images-load', true, true );
+			}
+			jQuery( 'body' ).get( 0 ).dispatchEvent( jetpackLazyImagesLoadEvent );
+		} );
+	
+</script>
+
+<script type="text/javascript" src="https://jackeyliutw.github.io/2020728/wp-content/themes/generatepress/js/menu.min.js"></script>
+<script type="text/javascript" src="https://jackeyliutw.github.io/2020728/wp-content/themes/generatepress/js/a11y.min.js"></script>
+<script type="text/javascript" src="https://jackeyliutw.github.io/2020728/wp-content/themes/generatepress/js/back-to-top.min.js"></script>
+<script type="text/javascript" src="https://c0.wp.com/p/jetpack/8.7.1/_inc/build/lazy-images/js/lazy-images.min.js"></script>
+<script type="text/javascript" src="https://jackeyliutw.github.io/2020728/wp-content/plugins/premium-addons-for-elementor/assets/frontend/min-js/lottie.min.js"></script>
+<script type="text/javascript" src="https://jackeyliutw.github.io/2020728/wp-content/plugins/premium-addons-for-elementor/assets/frontend/min-js/typed.min.js"></script>
+<script type="text/javascript" src="https://jackeyliutw.github.io/2020728/wp-content/plugins/premium-addons-for-elementor/assets/frontend/min-js/vticker.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var PremiumSettings = {"ajaxurl":"https:\/\/jackeyliutw.github.io\/2020728\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://jackeyliutw.github.io/2020728/wp-content/plugins/premium-addons-for-elementor/assets/frontend/min-js/premium-addons.min.js"></script>
+<script type="text/javascript" src="https://jackeyliutw.github.io/2020728/wp-content/plugins/premium-addons-for-elementor/assets/frontend/min-js/isotope.min.js"></script>
+<script type="text/javascript" src="https://jackeyliutw.github.io/2020728/wp-content/plugins/elementor/assets/lib/slick/slick.min.js"></script>
+<script type="text/javascript" src="https://jackeyliutw.github.io/2020728/wp-content/plugins/elementor/assets/js/frontend-modules.min.js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/5.4.1/wp-includes/js/jquery/ui/position.min.js"></script>
+<script type="text/javascript" src="https://jackeyliutw.github.io/2020728/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js"></script>
+<script type="text/javascript" src="https://jackeyliutw.github.io/2020728/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js"></script>
+<script type="text/javascript" src="https://jackeyliutw.github.io/2020728/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js"></script>
+<script type="text/javascript" src="https://jackeyliutw.github.io/2020728/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js"></script>
+<script type="text/javascript">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","downloadImage":"Download image"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.9.14","urls":{"assets":"https:\/\/jackeyliutw.github.io\/2020728\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"fep":[],"page":[],"general":{"elementor_global_image_lightbox":"yes","elementor_lightbox_enable_counter":"yes","elementor_lightbox_enable_fullscreen":"yes","elementor_lightbox_enable_zoom":"yes","elementor_lightbox_enable_share":"yes","elementor_lightbox_title_src":"title","elementor_lightbox_description_src":"description"},"editorPreferences":[]},"post":{"id":42,"title":"premuim%20addon%20%E2%80%93%20JACKEY%20LIU","excerpt":"","featuredImage":false}};
+</script>
+<script type="text/javascript" src="https://jackeyliutw.github.io/2020728/wp-content/plugins/elementor/assets/js/frontend.min.js"></script>
+
+</body>
+</html>
